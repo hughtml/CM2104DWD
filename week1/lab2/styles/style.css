@@ -23,7 +23,7 @@ header, section, article, nav, aside, footer, div {
   float: left;
 }
 
-#SiteNavigation {
+#SiteNavigation ul {
   display: inline-block;
 }
 
