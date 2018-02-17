@@ -10,10 +10,10 @@ header, section, article, nav, aside, footer, div {
   margin: 10px;
 }
 
-#SiteNavigation ul li {
-  list-style: none;
-  float: left;
-  padding-bottom: 10px;
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
 }
 
 .BlogPost {
