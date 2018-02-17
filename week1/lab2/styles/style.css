@@ -15,12 +15,11 @@ header, section, article, nav, aside, footer, div {
 }
 
 header #SiteLogo {
-  float: left;
-  margin: 10px;
+
 }
 
 header #SiteTitle {
-  float: left;
+
 }
 
 #PageContent {
