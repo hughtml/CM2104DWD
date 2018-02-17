@@ -16,8 +16,6 @@ header, section, article, nav, aside, footer, div {
 
 #SiteLogo {
   float: left;
-  height: 10px;
-  width: auto;
 }
 
 #PageContent {
