@@ -16,8 +16,8 @@ header, section, article, nav, aside, footer, div {
 
 #SiteNavigation ul li {
   list-style: none;
-  float: left;
-  margin-right: 10px;
+  /**float: left;
+  margin-right: 10px;**/
 }
 
 .BlogPost {
