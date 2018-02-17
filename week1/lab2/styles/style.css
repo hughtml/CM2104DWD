@@ -13,3 +13,12 @@ header, section, article, nav, aside, footer, div {
 .BlogPost {
   background-color: lightblue;
 }
+
+#SiteLogo {
+  float: left;
+}
+
+#PageContent {
+  border-color: red;
+  border-style: dotted;
+}
