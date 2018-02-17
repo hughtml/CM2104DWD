@@ -10,10 +10,6 @@ header, section, article, nav, aside, footer, div {
   margin: 10px;
 }
 
-#SiteNavigation ul {
-  padding: 10px;
-}
-
 #SiteNavigation ul li {
   list-style: none;
   float: left;
