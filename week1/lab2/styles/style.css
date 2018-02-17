@@ -23,9 +23,7 @@ header, section, article, nav, aside, footer, div {
   float: left;
 }
 
-#SiteNavigation ul {
-  display: inline-block;
-}
+
 
 #PageContent {
   border-color: red;
