@@ -3,7 +3,7 @@ body {
   width:80%;
 }
 
-header, section, article, aside, footer, div {
+header, section, article, nav, aside, footer, div {
   font-family: sans-serif;
   border: 1px dotted #000;
   padding: 10px;
