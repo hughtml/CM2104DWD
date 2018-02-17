@@ -14,14 +14,6 @@ header, section, article, nav, aside, footer, div {
   background-color: lightblue;
 }
 
-header #SiteLogo {
-
-}
-
-header #SiteTitle {
-
-}
-
 #SiteNavigation ul li {
   float: left;
   list-style: none;
