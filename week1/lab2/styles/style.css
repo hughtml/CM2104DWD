@@ -14,16 +14,14 @@ header, section, article, nav, aside, footer, div {
   background-color: lightblue;
 }
 
-#SiteLogo {
+header #SiteLogo {
   float: left;
   margin: 10px;
 }
 
-#SiteTitle {
+header #SiteTitle {
   float: left;
 }
-
-
 
 #PageContent {
   border-color: red;
