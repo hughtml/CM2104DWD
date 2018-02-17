@@ -10,8 +10,8 @@ header, section, article, nav, aside, footer, div {
   margin: 10px;
 }
 
-#SiteNavigation {
-  padding: 0px;
+#SiteNavigation ul {
+  margin: 10px;
 }
 
 #SiteNavigation ul li {
