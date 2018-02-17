@@ -12,6 +12,7 @@ header, section, article, nav, aside, footer, div {
 
 #SiteNavigation ul li {
   list-style: none;
+  float: left;
 }
 
 .BlogPost {
