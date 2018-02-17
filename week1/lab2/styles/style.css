@@ -22,6 +22,11 @@ header #SiteTitle {
 
 }
 
+nav li {
+  float: left;
+  list-style-type: none;
+}
+
 #PageContent {
   border-color: red;
   border-style: dotted;
