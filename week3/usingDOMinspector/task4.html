@@ -5,16 +5,17 @@
   <title>Task 4</title>
   <script>
   //Simple script to pop-up form values after submission
+  function testResults(form) {
+    var username = form.username.value;
+    var breed = form.breed.value;
+    var email = form.email.value;
+    var dob = form.dob.value;
+    var about = form.about.value;
+    //Grabbing form element values and storing them as variables
 
-  var username = form.username.value;
-  var breed = form.breed.value;
-  var email = form.email.value;
-  var dob = form.dob.value;
-  var about = form.about.value;
-  //Grabbing form element values and storing them as variables
-
-  alert("You registered: " + username + ", " + breed + ", " + email + ", " + dob + ", " + about);
-  //Alert message pop-up by appending variables
+    alert("You registered: " + username + ", " + breed + ", " + email + ", " + dob + ", " + about);
+    //Alert message pop-up by appending variables
+  }
   </script>
 </head>
 <body>
@@ -47,7 +48,7 @@
         <td><input type="textarea" name="about"></td>
       </tr>
     </table>
-    <input type="submit" name="submit" value="submit" onClick="testResults(this.form)"/>
+    <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/>
   </form>
 </body>
 </html>
