@@ -21,6 +21,11 @@
      var text = document.createTextNode("A Jedi craves not these things");
      newPara.appendChild(text);
      document.body.appendChild(newPara);
+
+     var replacementParagraph = document.createElement("p");
+     var newText = document.createTextNode("Aggression");
+     replacementParagraph.appendChild(newText);
+     document.body.replaceChild(replacementParagraph,paragraphs[0]);
    </script>
   </body>
 </html>
