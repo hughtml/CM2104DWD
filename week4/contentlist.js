@@ -13,7 +13,7 @@ function addContent () {
 	//var items_html;
 	for (var i=0; i < items.length; i++) {
 		var newElement = document.createElement("p");
-		var itemText = items[i];
+		var itemText = document.createTextNode(items[i]);
 		newElement.appendChild(itemText);
 		document.body.appendChild(newPara);
 	};
