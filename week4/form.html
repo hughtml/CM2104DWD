@@ -11,11 +11,11 @@
 			// 1. get a reference to the searchbox
 			//    using the DOM api method document.getElementById();
 			// searchbox = ???;
-			
+
 			// 2. get the value of the searchbox
 			//    using the DOM api value property of an element
 			// searchvalue = ???;
-			
+
 			// 3. test if the value is not equal to an empty string ("")
 			// if (???) {
 			// 	return true;
@@ -24,6 +24,18 @@
 			// 	alert("please type a search query!");
 			// 	return false;
 			// }
+
+			String searchTerm = document.getElementById("searchbox").value;
+			//Getting the search term from the input text field
+			//Storing it in the String
+			if (searchTerm) {
+				return true;
+				//If the String isn't empty, return true
+			} else {
+				alert("Please enter a search query before submitting.");
+				return false;
+				//If the String is empty, return false and tell the user to type something
+			}
 		}
 		</script>
 	</head>
