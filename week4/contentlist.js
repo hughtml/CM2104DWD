@@ -14,5 +14,5 @@ function addContent () {
 	// using javascript
 	// 1. find the content div
 	// 2. modify its html attribute by adding items_html
-	document.getElementByID("content").innerHTML = items_html;
+	document.body.getElementById("content").innerHTML = items_html;
 }
