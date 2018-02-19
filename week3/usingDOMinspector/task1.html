@@ -11,10 +11,10 @@
       var searchTerm = form.searchterms.value;
       //Grabbing form element values and storing them as variables
 
-      var newElement = document.body.newElement("p");
+      var newElement = document.body.createElement("p");
       var newElementText = document.body.createTextNode(searchTerm);
       newElement.appendChild(newElementText);
-      document.body.getElementById("content").appendChid(newElement);
+      document.body.getElementById("content").appendChild(newElement);
 
     }
     </script>
