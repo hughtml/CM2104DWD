@@ -15,7 +15,7 @@ function addContent () {
 		var newElement = document.createElement("p");
 		var itemText = document.createTextNode(items[i]);
 		newElement.appendChild(itemText);
-		document.body.appendChild(newElement);
+		document.body.getElementById("content").appendChild(newElement);
 	};
 	//items_html += "</ul>";
 
