@@ -15,6 +15,16 @@
 
     alert("You registered: " + username + ", " + breed + ", " + email + ", " + dob + ", " + about);
     //Alert message pop-up by appending variables
+
+    var inputs = [username, breed, email, dob, about];
+
+    for (var i = 0; i < inputs.length; i++) {
+      var newElement = document.body.newElement("p");
+      var newElementText = document.body.createTextNode(inputs[i]);
+      newElement.appendChild(newElementText);
+      document.body.getElementById("content").appendChid(newElement);
+    }
+
   }
   </script>
 </head>
@@ -50,5 +60,7 @@
     </table>
     <input type="submit" name="submit" value="Submit" onClick="testResults(this.form)"/>
   </form>
+  <div id="content">
+  </div>
 </body>
 </html>
