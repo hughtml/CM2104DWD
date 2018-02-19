@@ -11,8 +11,8 @@
       var searchTerm = form.searchterms.value;
       //Grabbing form element values and storing them as variables
 
-      var newElement = document.body.createElement("p");
-      var newElementText = document.body.createTextNode(searchTerm);
+      var newElement = document.createElement("p");
+      var newElementText = document.createTextNode(searchTerm);
       newElement.appendChild(newElementText);
       document.body.getElementById("content").appendChild(newElement);
 

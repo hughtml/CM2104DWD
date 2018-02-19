@@ -19,8 +19,8 @@
     var inputs = [username, breed, email, dob, about];
 
     for (var i = 0; i < inputs.length; i++) {
-      var newElement = document.body.createElement("p");
-      var newElementText = document.body.createTextNode(inputs[i]);
+      var newElement = document.createElement("p");
+      var newElementText = document.createTextNode(inputs[i]);
       newElement.appendChild(newElementText);
       document.body.getElementById("content").appendChild(newElement);
     }
