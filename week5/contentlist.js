@@ -24,6 +24,6 @@ function addContent () {
 	// 1. find the content div
 	// 2. modify its html attribute by adding items_html
 	$('#content').html(items_html);
-	//Finding the content div and modifying the HTML attribute
+	//Finding the content div and modifying the HTML attribute 
 
 }
