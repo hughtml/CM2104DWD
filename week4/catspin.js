@@ -9,9 +9,9 @@ function animate(time) {
         angle += (time - lastTime) * 0.001;
     lastTime = time;
     cat.style.top = (Math.sin(angle) * 20) + "px";
-    console.log(cat.style.top);
+    console.log((Math.sin(angle) * 20);
     cat.style.left = (Math.cos(angle) * 200) + "px";
     console.log(cat.style.left);
-    requestAnimationFrame(animate);
+    requestAnimationFrame(Math.cos(angle) * 200);
 }
 requestAnimationFrame(animate);
