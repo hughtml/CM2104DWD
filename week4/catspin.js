@@ -9,14 +9,14 @@ function animate(time) {
         angle += (time - lastTime) * 0.001;
     lastTime = time;
     var topValue = (Math.sin(angle) * 20);
-    while ((topValue < 0) || (topValue > 1920)) {
-      topValue--;
+    while ((topValue < 0)) {
+      topValue++;
     }
     cat.style.top = topValue + "px";
 
     var leftValue = (Math.cos(angle) * 200);
-    while ((leftValue < 0) || (leftValue > 1920)) {
-      leftValue--;
+    while ((leftValue < 0)) {
+      leftValue++;
     }
     cat.style.left = leftValue + "px";
 
