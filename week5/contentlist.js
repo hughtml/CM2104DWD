@@ -23,6 +23,7 @@ $(function(){
 		// 2. modify its html attribute by adding items_html
 		$('#content').html(items_html);
 		//Finding the content div and modifying the HTML attribute
+		//
 
 	});
 
