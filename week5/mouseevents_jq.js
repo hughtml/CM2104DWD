@@ -8,20 +8,20 @@ $(function(){
 	// set the mouse enter and mouse leave functions, just like the onclick in the lecture
 	// use the html attribute to set the text
 	$("#button1").mouseenter(function(){
-		$("#button1").html("<p>Thank You</p>");
+		$("#button1").html("Thank You");
 	});
 
 	$("#button1").mouseleave(function(){
-		$("#button1").html("<p>Mouse Over</p>");
+		$("#button1").html("Mouse Over");
 	});
 	// and mouseup, mousedown for button2
 
 	$("#button2").mousedown(function(){
-		$("#button2").html("<p>Release Me</p>");
+		$("#button2").html("Release Me");
 	});
 
 	$("#button2").mouseup(function(){
-		$("#button2").html("<p>Thank You</p>");
+		$("#button2").html("Thank You");
 	});
 
 });
