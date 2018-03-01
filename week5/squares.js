@@ -19,13 +19,13 @@ $(function(){
 		else if ($(this).hasClass("blue")) {
 			$(this).toggleClass("green");
 			//$(this).slideUp("slow", function() {});
-			//$(this).slideDown("slow", function() {});
+			//$(this).slideDown("slow", function() {});hughtml
 		}
 		else if ($(this).hasClass("green")) {
 			$(this).toggleClass("red");
 		}
 
-		$(this).animate({right:"+=360"}, 1000, function(){});
+		$(this).animate({left:"-=360"}, 1000, function(){});
 	});
 
 });
