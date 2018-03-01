@@ -9,8 +9,8 @@ function animate(time) {
         angle += (time - lastTime) * 0.001;
     lastTime = time;
     var topValue = (Math.sin(angle) * 20);
-    while ((topValue < 0)) {
-      topValue++;
+    if ((topValue < 0)) {
+      topValue = 0;
     }
     cat.style.top = topValue + "px";
 
