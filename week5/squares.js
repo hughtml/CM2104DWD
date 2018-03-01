@@ -8,20 +8,24 @@ $(function(){
 	$("div").click(function(){
 		// $(this) is a shortcut for the element we just selected
 		// using $("div")
+		$(this).css("position", "absolute");
+		$(this).animate({left:"+=360"}, 1000, function(){});
+
 		if ($(this).hasClass("red")) {
 			$(this).toggleClass("blue");
-			$(this).fadeOut();
-			$(this).fadeIn();
+			//$(this).fadeOut();
+			//$(this).fadeIn();
 		}
 		else if ($(this).hasClass("blue")) {
 			$(this).toggleClass("green");
 			//$(this).slideUp("slow", function() {});
-
 			//$(this).slideDown("slow", function() {});
 		}
 		else if ($(this).hasClass("green")) {
 			$(this).toggleClass("red");
 		}
+
+		$(this).animate({right:"+=360"}, 1000, function(){});
 	});
 
 });
