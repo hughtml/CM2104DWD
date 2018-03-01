@@ -9,8 +9,8 @@ $(function(){
 		// $(this) is a shortcut for the element we just selected
 		// using $("div")
 		if ($(this).hasClass("red")) {
-			$(this).fadeOut();
 			$(this).toggleClass("blue");
+			$(this).fadeOut();
 			$(this).fadeIn();
 		}
 		else if ($(this).hasClass("blue")) {
