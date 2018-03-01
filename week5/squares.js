@@ -25,7 +25,6 @@ $(function(){
 			$(this).toggleClass("red");
 		}
 
-		$(this).animate({left:"-=360"}, 1000, function(){});
 	});
 
 });
