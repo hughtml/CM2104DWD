@@ -14,9 +14,9 @@ $(function(){
 			$(this).fadeIn();
 		}
 		else if ($(this).hasClass("blue")) {
-			$(this).slideUp("slow", function() {});
+			//$(this).slideUp("slow", function() {});
 			$(this).toggleClass("green");
-			$(this).slideDown("slow", function() {});
+			//$(this).slideDown("slow", function() {});
 		}
 		else if ($(this).hasClass("green")) {
 			$(this).toggleClass("red");
