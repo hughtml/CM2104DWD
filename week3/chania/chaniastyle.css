@@ -63,4 +63,5 @@ html {
 @media only screen and (min-width: 600) and (max-width: 768px) {
     /* For desktops as well */
     .col-3 {width: 25%;}
+    .aside {width: 100%;}
 }
