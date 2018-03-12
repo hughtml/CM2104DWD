@@ -32,7 +32,8 @@ $(document).ready(function () {
         $("table").addClass("table");
         //For styling, adding the table css class to our table
 
-      };
+      }
+
     });
 
   });
