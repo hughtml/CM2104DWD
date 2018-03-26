@@ -1,5 +1,5 @@
 var http = require('http');
-var currentDate = require(mymodule);
+var currentDate = require('./mymodule');
 //Telling node to use the new module
 
 http.createServer(function(req, res) {
