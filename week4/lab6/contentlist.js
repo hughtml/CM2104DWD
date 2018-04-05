@@ -1,7 +1,6 @@
 
-function() {
-
-	function addContent () {
+function addContent () {
+		/** John's code
 		// add a list of items to the content div
 		var items = ["hewey", "dewey", "louie"];
 
@@ -21,10 +20,8 @@ function() {
 		//Finding the content div
 		contentDiv.innerHTML = items_html;
 		//Modifying its inner HTML, adding the items_html variable
-
-	}
-
-	function addContentElements() {
+		**/
+		
 		var items = ["Hewey", "Dewey", "Louie"];
 		//Creating an array to store the items
 
@@ -41,6 +38,5 @@ function() {
 		//Finding the content div
 		contentDiv.appendChild(list);
 		//Adding the list
-	}
 
 }
