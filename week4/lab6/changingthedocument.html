@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Changing the Document</title>
+  </head>
+  <body>
+    <p>Skittles</p>
+    <p>Fear</p>
+    <p>Anger</p>
+
+    <script>
+      var paragraphs = document.body.getElementsByTagName("p");
+      //Storing each paragraph element in an array
+      document.body.insertBefore(paragraphs[2], paragraphs[0]);
+      //Placing the 3rd paragraph element before the 1st
+    </script>
+  </body>
+</html>
