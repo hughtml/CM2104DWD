@@ -23,7 +23,7 @@ function addContent() {
 }
 
 function addNewContent(form) {
-	var newInput = form.inputValue.value;
+	var newInput = form.newInput.value;
 	//Storing the value from the newInput field
 	console.log(newInput.value);
 	var newElement = document.createElement("li");
