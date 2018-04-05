@@ -23,7 +23,7 @@ function addContent() {
 }
 
 function addNewContent() {
-	var newInput = document.getElementById("inputValue").value;
+	var newInput = document.getElementById("inputValue");
 	//Storing the value from the newInput field
 	var newElement = document.createElement("li");
 	//Creating a new list item element
