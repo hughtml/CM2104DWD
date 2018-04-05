@@ -1,6 +1,6 @@
 
 function addContent () {
-		
+
 		var items = ["Hewey", "Dewey", "Louie"];
 		//Creating an array to store the items
 
@@ -11,6 +11,8 @@ function addContent () {
 			//Creating a new list item element
 			newContent.appendChild(document.createTextNode(items[i]));
 			//Creating a new text node using the current item in the array and adding it to the list item element
+			list.appendChild(newContent);
+			//Adding the new element to the list
 		}
 		//Iterating through the whole array
 		var contentDiv = document.getElementById("content");
