@@ -21,3 +21,22 @@ function addContent () {
 	//Modifying its inner HTML, adding the items_html variable
 
 }
+
+function addContentElements() {
+	var items = ["Hewey", "Dewey", "Louie"];
+	//Creating an array to store the items
+
+	var list = document.createElement("ul");
+	//Creating the unordered list element
+	for (var i = 0; i < items.length; i++) {
+		var newContent = document.createElement("li");
+		//Creating a new list item element
+		newContent.appendChild(document.createTextNode(items[i]));
+		//Creating a new text node using the current item in the array and adding it to the list item element
+	}
+	//Iterating through the whole array
+	var contentDiv = document.getElementById("content");
+	//Finding the content div
+	contentDiv.appendChild(list);
+	//Adding the list
+}
