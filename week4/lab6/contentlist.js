@@ -25,6 +25,7 @@ function addContent() {
 function addNewContent() {
 	var newInput = document.getElementById("inputValue");
 	//Storing the value from the newInput field
+	console.log(newInput.value);
 	var newElement = document.createElement("li");
 	//Creating a new list item element
 	newElement.appendChild(document.createTextNode(newInput));
