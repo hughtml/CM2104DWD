@@ -16,10 +16,20 @@
       //Placing the 3rd paragraph element before the 1st
       //document.body.innerHTML = "<p>Well that was useful!</p>";
       //Overriding all the HTML and replacing it
-      var newPara = document.createTextNode("A Jedi craves not these things");
+
+      //var newPara = document.createTextNode("A Jedi craves not these things");
       //Creating a new text node and storing it in a variable
-      document.body.appendChild(newPara);
+      //document.body.appendChild(newPara);
       //Adding the text node to the end of the HTML document
+
+      var newPara = document.createElement("p");
+      //Creating a new paragraph element
+      var text = document.createTextNode("A Jedi craves not these things");
+      //Storing the text for the new node in a variable
+      newPara.appendChild(text);
+      //Adding the text to the new element
+      document.body.appendChild(newPara);
+      //Adding the new node to the end of th HTML document 
     </script>
   </body>
 </html>
