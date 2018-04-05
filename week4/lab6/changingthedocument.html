@@ -29,7 +29,16 @@
       newPara.appendChild(text);
       //Adding the text to the new element
       document.body.appendChild(newPara);
-      //Adding the new node to the end of th HTML document 
+      //Adding the new node to the end of th HTML document
+
+      var newParagraph = document.createElement("p");
+      //Creating a new paragraph element
+      var newText = "Aggression";
+      //Storing the text for the new element in a variable
+      newParagraph.appendChild(newText);
+      //Adding the text to the new element
+      document.body.replaceChild(paragraphs[1], newParagraph);
+      //Replacing the "Skittles" paragraph with the "Aggression" paragraph
     </script>
   </body>
 </html>
