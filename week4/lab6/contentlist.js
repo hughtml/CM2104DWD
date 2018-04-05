@@ -22,8 +22,8 @@ function addContent() {
 
 }
 
-function addNewContent() {
-	var newInput = document.getElementById("inputValue");
+function addNewContent(form) {
+	var newInput = form.inputValue.value;
 	//Storing the value from the newInput field
 	console.log(newInput.value);
 	var newElement = document.createElement("li");
