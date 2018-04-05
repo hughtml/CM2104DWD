@@ -1,5 +1,5 @@
 
-function addContent () {
+function addContent() {
 
 		var items = ["Hewey", "Dewey", "Louie"];
 		//Creating an array to store the items
@@ -23,11 +23,11 @@ function addContent () {
 }
 
 function addNewContent() {
-	var input = document.getElementById("inputValue").value;
+	var newInput = document.getElementById("inputValue").value;
 	//Storing the value from the newInput field
 	var newElement = document.createElement("li");
 	//Creating a new list item element
-	newElement.appendChild(document.createTextNode(input));
+	newElement.appendChild(document.createTextNode(newInput));
 	//Creating a new text node using the value from the input field and adding it to the list item element
 	var list = document.getElementsByTagName("ul")[0];
 	//Getting the first (and only) unordered list element
