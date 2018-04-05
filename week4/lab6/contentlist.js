@@ -22,12 +22,12 @@ function addContent () {
 
 }
 
-function addNewContent(form) {
-	var newInput = form.newInput.value;
+function addNewContent() {
+	var input = document.getElementById("inputValue").value;
 	//Storing the value from the newInput field
 	var newElement = document.createElement("li");
 	//Creating a new list item element
-	newElement.appendChild(document.createTextNode(newInput));
+	newElement.appendChild(document.createTextNode(input));
 	//Creating a new text node using the value from the input field and adding it to the list item element
 	var list = document.getElementsByTagName("ul")[0];
 	//Getting the first (and only) unordered list element
