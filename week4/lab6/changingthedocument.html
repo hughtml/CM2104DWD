@@ -14,8 +14,12 @@
       //Storing each paragraph element in an array
       document.body.insertBefore(paragraphs[2], paragraphs[0]);
       //Placing the 3rd paragraph element before the 1st
-      document.body.innerHTML = "<p>Well that was useful!</p>";
+      //document.body.innerHTML = "<p>Well that was useful!</p>";
       //Overriding all the HTML and replacing it
+      var newPara = document.createTextNode("A Jedi craves not these things");
+      //Creating a new text node and storing it in a variable
+      document.body.appendChild(newPara);
+      //Adding the text node to the end of the HTML document
     </script>
   </body>
 </html>
