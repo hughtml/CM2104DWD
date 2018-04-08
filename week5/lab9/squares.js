@@ -9,7 +9,7 @@ $(function(){
 		// $(this) is a shortcut for the element we just selected
 		// using $("div")
 		if ($(this).hasClass("red")) {
-			$(this).toggleClass("blue" "red");
+			$(this).toggleClass("blue red");
 		}
 		else if ($(this).hasClass("blue")) {
 			$(this).addClass("green").removeClass("blue");
