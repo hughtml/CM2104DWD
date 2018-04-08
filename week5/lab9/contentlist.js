@@ -7,7 +7,7 @@ $(document).ready(function(){
 	// 2. add an event listener for 'click' events
 	// 3. assign the addContent() function to the click event
 
-	alert($('#addcontent')).val();
+	alert($('#addcontent').val());
 	$('#addcontent').click(addContent());
 	//Finding the addcontent button, assigning an event listener for click events
 	//The addContent() function is the handler for these events
