@@ -27,6 +27,9 @@ $(function(){
 		else if ($(this).hasClass("green")) {
 			$(this).toggleClass("red green");
 			//Simplifying the if/else statement with a toggleClass method
+			$(this).css("position", "absolute");
+			$(this).animate({left: "+=360"}, 1000, function(){});
+			//Copying the example from the lab slides
 		}
 	});
 
