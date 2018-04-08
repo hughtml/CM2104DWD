@@ -10,9 +10,9 @@ $(function(){
 		// using $("div")
 		if ($(this).hasClass("red")) {
 			$(this).fadeOut(800);
+			$(this).delay(400);
 			$(this).toggleClass("blue red");
 			//Simplifying the if/else statement with a toggleClass method
-			$(this).delay(400);
 			$(this).fadeIn(800);
 			//When this square it clicked, it will fade out then change it's colour and fade in
 		}
