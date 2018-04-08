@@ -14,7 +14,7 @@ $(function(){
 	// now you need to do the same for button1 for mouseleave
 	// and mouseup, mousedown for button2
 
-	$("#button1").mouseleave(function() {
+	$("#button1").mouseout(function() {
 		$("#button1").html("<p>Mouse Over Me</p>");
 		//Editing the inner HTML of the first buttsoon
 	});
