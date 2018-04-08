@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 	// 'main' function called when page is loaded and ready
 
 	// complete the following using jQuery
@@ -7,7 +7,7 @@ $(document).ready(function(){
 	// 2. add an event listener for 'click' events
 	// 3. assign the addContent() function to the click event
 
-	$('#addcontent').click(addContent());
+	$('#addcontent').click(alert("Button is clicked!"));
 	//Finding the addcontent button, assigning an event listener for click events
 	//The addContent() function is the handler for these events
 
