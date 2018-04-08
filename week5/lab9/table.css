@@ -1,9 +1,9 @@
-tr.row1{
-  background-color: green;
+.row1{
+  background-color: slategrey;
   /* Setting colour for the odd rows */
 }
 
-tr.row2{
-  background-color: yellow;
+.row2{
+  background-color: lightgrey;
   /* Setting colour for the even rows */
 }
