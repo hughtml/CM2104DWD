@@ -1,7 +1,7 @@
 $(function(){
 //Function running when the document loads
 
-    var rows = $(tr);
+    var rows = $('tr');
     //Storing all the table rows in an array
     for (var i = 0; i < rows.length; i++) {
         if ((i == 0) || (i % 2 == 0)) {
