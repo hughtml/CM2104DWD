@@ -19,9 +19,9 @@ $(function(){
 		else if ($(this).hasClass("blue")) {
 			$(this).toggleClass("green blue");
 			//Simplifying the if/else statement with a toggleClass method
-			$(this).slideDown(800);
-			$(this).delay(400);
 			$(this).slideUp(800);
+			$(this).delay(400);
+			$(this).slideDown(800);
 			//When this square it clicked, it will change it's colour then slide down and slide up
 		}
 		else if ($(this).hasClass("green")) {
