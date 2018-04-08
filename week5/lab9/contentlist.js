@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 	// 'main' function called when page is loaded and ready
 
 	// complete the following using jQuery
