@@ -20,7 +20,7 @@ $(function(){
 	});
 	//Finding button1
 
-	$("button2").mouseup(function() {
+	$("button2").mousedown(function() {
 		$("button2").html("<p>Release Me</p>");
 		$("button2").css("backgroundColor", "lightblue");
 		//Editing the inner HTML and colour of the second buttoon
