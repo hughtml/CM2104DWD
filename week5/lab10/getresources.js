@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     $("#retrieve-resources").click(function( {
 
-      var displayResources = $("#display-resources");
+      var displayResources = $('#display-resources');
       //Setting up the page component to write to
       displayResources.text('Loading data from JSON source...');
       //Giving it an initial value
