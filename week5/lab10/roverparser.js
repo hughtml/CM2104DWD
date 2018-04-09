@@ -21,7 +21,7 @@
 
         var output = "<table><thead><tr><th>Rover</th><th>Camera</th><th>Image URL</th><th>Earth Date</th></thead><tbody>";
         for (var i in photos)  {
-          output+="<tr><td>" + photos[i].rover.name + "</td><td>" + photos[i].camera.full_name + "</td><td>" + photos[i].img_src + photos[i].earth_date + "</td></tr>";
+          output+="<tr><td>" + photos[i].rover.name + "</td><td>" + photos[i].camera.full_name + "</td><td>" + photos[i].img_src + "</td><td>" + photos[i].earth_date + "</td></tr>";
         }
         output+="</tbody></table>";
 
