@@ -15,6 +15,18 @@ $(document).ready(function() {
         //A URL which is the source of the JSON file
         success: function(result) {
             //Data will be dealt with here
+
+            var output = "<table><thead><tr><th>Name</th><th>Provider</th><th>URL</th></thead><tbody>";
+            //Creating a String with HTML representing table headers
+
+            for (var i in result) {
+
+              output += "<tr><td>" + result[i].name + "</td><td>" + result[i].provider + "</td><td>" + result[i].url + "</td></tr>";
+              //Asking each result's JSON for the name, provider and url
+              //Surrounding each of these in <td> tags to continue formatting
+
+            } //Running through each JSON result
+
         } //Success function where the code will go when the file is successfully loaded
       })
 
