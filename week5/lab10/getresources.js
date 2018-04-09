@@ -1,7 +1,7 @@
 $(document).ready(function() {
 //Running when the page is loaded
 
-    $("#retrieve-resources").click(function( {
+    $("#retrieve-resources").click(function() {
 
       var displayResources = $('#display-resources');
       //Setting up the page component to write to
