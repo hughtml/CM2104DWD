@@ -35,7 +35,7 @@ $(document).ready(function() {
         } //Success function where the code will go when the file is successfully loaded
       })
 
-    }));
+    });
     //Adding a handler for the click event for a retrieve-resources button
 
 })
