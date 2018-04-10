@@ -24,7 +24,7 @@ $('#shakey').click(function() {
         var magnitude = parseFloat(quake.properties.mag);
         //And the magnitude
 
-        var circle = L.circle([lng,lat], mag * 10000, {
+        var circle = L.circle([lng,lat], magnitude * 10000, {
             color: 'red',
             opacity: 0,
             fillColor: 'red',
