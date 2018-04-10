@@ -3,7 +3,7 @@ $(function (){
     alert("Document is ready.");
     //The document is ready
 
-    S('#searchform').submit(function() {
+    $('#searchform').submit(function() {
     //Tying a listener to the submit event of the form button
       addItemToList("Example Item");
       //Calling the function with a String parameter
