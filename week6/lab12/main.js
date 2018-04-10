@@ -54,7 +54,7 @@ $('#dropey').click(function() {
         var mass = parseFloat(meteor.mass);
         //And the mass
 
-        var circle = L.circle([lng,lat], mass * 10000, {
+        var circle = L.circle([lng,lat], mass, {
             color: 'blue',
             opacity: 0,
             fillColor: 'blue',
