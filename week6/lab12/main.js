@@ -48,8 +48,8 @@ $('#dropey').click(function() {
 
     result.forEach(function(meteor) {
     //For each earthquake
-        var lng = meteor.geolocation[2];
-        var lat = meteor.geolocation[0];
+        var lng = meteor.geolocation.longitude;
+        var lat = meteor.geolocation.latitude;
         //Getting the co-ordinates
         var mass = parseFloat(meteor.mass);
         //And the mass
