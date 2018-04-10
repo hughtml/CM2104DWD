@@ -32,9 +32,14 @@ function addResultTitlesAndImages(jsondata) {
   for (var i = 0; i < 10; i++) {
     var title = jsondata.Search[i].Title;
     var poster = jsondata.Search[i].Poster;
-    //Storing the title and poster URL of each result in a variable
-    htmlstring += "<li>" + title + " - " + poster + "</li>";
-    //Adding the title and poster link to the HTML String, encased in list item tags
+    var releaseYear = jsondata.Search[i].Year;
+    var type = jsondata.Search[i].Type;
+    //Storing the parameters of each result in a variable
+    htmlstring += "<li>Title: " + title + "<br>";
+    htmlstring += "Poster: <img src='" + poster + "'/><br>";
+    htmlstring += "Release Year: " + releaseYear + "<br>";
+    htmlstring += "Type of Media: " + type + "</li>";
+    //Adding the results and formatting the HTML String, encased in list item tags
   } //Iteratng over the collection of results
 
   $('#results').html(htmlstring);
