@@ -19,12 +19,12 @@ function getResultsFromOMDb(searchTerms) {
   //Building the URL for the request
   $.getJSON(url, function(jsondata) {
   //Using the JQuery JSON shortcut
-      addResultTitlesAndImages(jsondata);
+      addResults(jsondata);
       //Handling the results
   });
 }
 
-function addResultTitlesAndImages(jsondata) {
+function addResults(jsondata) {
   console.log(jsondata);
   //Logging the JSON data to allow for data mining
   var htmlstring = "";
