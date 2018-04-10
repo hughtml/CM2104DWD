@@ -19,21 +19,22 @@ function getResultsFromOMDb(searchTerms) {
   //Building the URL for the request
   $.getJSON(url, function(jsondata) {
   //Using the JQuery JSON shortcut
-      addResultTitles(jsondata);
+      addResultTitlesAndImages(jsondata);
       //Handling the results
   });
 }
 
-function addResultTitles(jsondata) {
+function addResultTitlesAndImages(jsondata) {
   console.log(jsondata);
   //Logging the JSON data to allow for data mining
   var htmlstring = "";
   //Creating a String to contain the HTML to inject
   for (var i = 0; i < 10; i++) {
     var title = jsondata.Search[i].Title;
-    //Storing the title of each result in a variable
-    htmlstring += "<li>" + title + "</li>";
-    //Adding the title to the HTML String, encased in list item tags
+    var poster = jsondata.Search[i].Poster;
+    //Storing the title and poster URL of each result in a variable
+    htmlstring += "<li>" + title + " - " + poster + "</li>";
+    //Adding the title and poster link to the HTML String, encased in list item tags
   } //Iteratng over the collection of results
 
   $('#results').html(htmlstring);
