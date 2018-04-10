@@ -19,15 +19,15 @@ function getResultsFromOMDb(searchTerms) {
   //Building the URL for the request
   $.getJSON(url, function(jsondata) {
   //Using the JQuery JSON shortcut
-      printJSON(jsondata);
+      prettyPrintJSON(jsondata);
       //Handling the results
   });
 }
 
-function printJSON(jsondata) {
-  var normal = JSON.stringify(jsondata);
-  //Converting the JSON data to a printable String
-  $('#resultsbox').append("<p>" + normal + "</p>");
+function prettyPrintJSON(jsondata) {
+  var pretty = JSON.stringify(jsondata, null, 4);
+  //Converting the JSON data to a printable String - in pretty form
+  $('#resultsbox').append("<p>" + pretty + "</p>");
   //Printing the JSON to the screen
 }
 
