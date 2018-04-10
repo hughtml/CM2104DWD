@@ -25,6 +25,8 @@ function getResultsFromOMDb(searchTerms) {
 }
 
 function addResultTitles(jsondata) {
+  console.log(jsondata);
+  //Logging the JSON data to allow for data mining
   var htmlstring = "";
   //Creating a String to contain the HTML to inject
   for (var i = 0; i < 10; i++) {
