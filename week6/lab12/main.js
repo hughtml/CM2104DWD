@@ -6,3 +6,14 @@ var Esri_WorldGrayCanvas = L.tileLayer('http://server.arcgisonline.com/ArcGIS/re
 
 Esri_WorldGrayCanvas.addTo(mymap);
 //Adding the tiles to the map
+
+$('#shakey').click(function() {
+//Adding a click event listener for when the earthquakes button is clicked
+
+  console.log("Getting quakes...");
+  //Logging a console message to indicate progress
+  $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function(result) {
+    console.log(result);
+    //Logging the result from the JSON download to the console
+  })
+})
