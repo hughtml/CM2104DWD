@@ -46,7 +46,7 @@ $('#dropey').click(function() {
     console.log(result);
     //Logging the result from the JSON download to the console
 
-    result.features.forEach(function(meteor) {
+    result.forEach(function(meteor) {
     //For each earthquake
         var lng = meteor.geolocation[2];
         var lat = meteor.geolocation[0];
