@@ -51,7 +51,7 @@ $('#dropey').click(function() {
         var lng = meteor.geolocation.longitude;
         var lat = meteor.geolocation.latitude;
         //Getting the co-ordinates
-        var mass = parseFloat(meteor.mass);
+        var mass = meteor.mass;
         //And the mass
 
         var circle = L.circle([lng,lat], mass, {
