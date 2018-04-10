@@ -35,7 +35,7 @@ $('#shakey').click(function() {
         //Adding it to the map
     });
   });
-});
+})
 
 $('#dropey').click(function() {
 //Adding a click event listener for when the meteors button is clicked
