@@ -21,8 +21,10 @@ $('#shakey').click(function() {
         var lng = quake.geometry.coordinates[0];
         var lat = quake.geometry.coordinates[1];
         //Getting the co-ordinates
+        var magnitude = parseFloat(quake.properties.mag);
+        //And the magnitude
 
-        var circle = L.circle([lng,lat], 1, {
+        var circle = L.circle([lng,lat], mag * 10000, {
             color: 'red',
             opacity: 0,
             fillColor: 'red',
