@@ -35,4 +35,34 @@ $('#shakey').click(function() {
         //Adding it to the map
     });
   });
-})
+});
+
+$('#dropey').click(function() {
+//Adding a click event listener for when the meteors button is clicked
+
+  console.log("Getting meteors...");
+  //Logging a console message to indicate progress
+  $.getJSON("https://data.nasa.gov/resource/gh4g-9sfh.json", function(result) {
+    console.log(result);
+    //Logging the result from the JSON download to the console
+
+    result.features.forEach(function(meteor) {
+    //For each earthquake
+        var lng = meteor.geolocation[2];
+        var lat = meteor.geolocation[0];
+        //Getting the co-ordinates
+        var mass = parseFloat(quake.mass);
+        //And the mass
+
+        var circle = L.circle([lng,lat], mass * 10000, {
+            color: 'blue',
+            opacity: 0,
+            fillColor: 'blue',
+            fillOpacity: 0.8
+        })
+        //Creating a circle at that point, styling it
+        circle.addTo(mymap).bindPopup("+meteor.name+");
+        //Adding it to the map including a popup
+    });
+  });
+});
