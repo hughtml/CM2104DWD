@@ -15,7 +15,7 @@ $(function (){
 });
 
 function getResultsFromOMDb(searchTerms) {
-  var url = "http://www.omdbapi.com/?i=tt3896198&apikey=8d5fad5a&s=" + searchTerms;
+  var url = "http://www.omdbapi.com/?i=tt3896198&apikey=32c3c53&s=" + searchTerms;
   //Building the URL for the request
   $.getJSON(url, function(jsondata) {
   //Using the JQuery JSON shortcut
