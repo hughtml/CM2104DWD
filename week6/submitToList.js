@@ -5,8 +5,10 @@ $(function (){
 
     $('#searchform').submit(function() {
     //Tying a listener to the submit event of the form button
-      addItemToList("Example Item");
-      //Calling the function with a String parameter
+      var searchTerms = $('#searchterms').val();
+      //Getting the item in the search term box
+      addItemToList(searchTerms);
+      //Calling the function with the search terms as the parameter
       return false;
       //Preventing the page from reloading
     });
