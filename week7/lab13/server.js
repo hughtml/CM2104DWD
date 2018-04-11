@@ -36,7 +36,7 @@ app.get('/add', function(req, res) {
 
 //Route 5
 
-app.get('/add', function(req, res) {
+app.get('/calc', function(req, res) {
   var url = require('url');
   var url_parts = url.parse(req.url, true);
   //Storing the url and then parsing the result
