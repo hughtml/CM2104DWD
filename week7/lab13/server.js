@@ -41,14 +41,10 @@ app.get('/calc', function(req, res) {
   var url_parts = url.parse(req.url, true);
   //Storing the url and then parsing the result
   var query = url_parts.query;
-  console.log(query.x);
-  var x = query[1];
-  var y = query[3];
-  console.log(x);
-  console.log(y);
-  res.send(query);
+  var x = parseInt(query.x);
+  var y = parseInt(query.y);
   //Accessing the values of x and y sent by the client
-  var operation = query[4];
+  var operation = Object.getOwnPropertyNames(query)[2];
   console.log(operation);
   //Accessing the operation sent by the client
   if (operation === "add") {
