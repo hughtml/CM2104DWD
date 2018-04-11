@@ -43,8 +43,12 @@ app.get('/calc', function(req, res) {
   var query = url_parts.query;
   var x = parseInt(query[1]);
   var y = parseInt(query[3]);
+  console.log(x);
+  console.log(y);
+  res.send(query);
   //Accessing the values of x and y sent by the client
   var operation = query[4];
+  console.log(operation);
   //Accessing the operation sent by the client
   if (operation === "add") {
     res.send("x + y = " + (x + y));
