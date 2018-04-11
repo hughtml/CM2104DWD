@@ -41,7 +41,7 @@ app.get('/calc', function(req, res) {
   var url_parts = url.parse(req.url, true);
   //Storing the url and then parsing the result
   var query = url_parts.query;
-  console.log(query);
+  console.log(query[0]);
   var x = query[1];
   var y = query[3];
   console.log(x);
