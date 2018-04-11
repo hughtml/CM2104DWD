@@ -46,16 +46,16 @@ app.get('/calc', function(req, res) {
   //Accessing the values of x and y sent by the client
   var operation = query[4];
   //Accessing the operation sent by the client
-  if (operation == "add") {
+  if (operation === "add") {
     res.send("x + y = " + (x + y));
     //Displaying the sum of both
-  } else if (operation == "sub") {
+  } else if (operation === "sub") {
     res.send("x - y = " + (x - y));
     //Displaying the subtraction of both
-  } else if (operation == "mul") {
+  } else if (operation === "mul") {
     res.send("x * y = " + (x * y));
     //Displaying the multiplication of both
-  } else if (operation == "div") {
+  } else if (operation === "div") {
     res.send("x / y = " + (x / y));
     //Displaying the division of both
   }
