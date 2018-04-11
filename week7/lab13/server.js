@@ -34,5 +34,16 @@ app.get('/add', function(req, res) {
   //Displaying the sum of both
 });
 
+//Route 5
+
+app.get('/add', function(req, res) {
+  var url = require('url');
+  var url_parts = url.parse(req.url, true);
+  //Storing the url and then parsing the result
+  var query = url_parts.query;
+  res.send(query);
+  //Displaying the sum of both
+});
+
 app.listen(8080);
 //Listening on port 8080
