@@ -24,5 +24,15 @@ app.get('/joke', function(req, res) {
   res.end(randomJoke);
 });
 
+//Route 4
+
+app.get('/add', function(req, res) {
+  var x = parseInt(req.query.x);
+  var y = parseInt(req.query.y);
+  //Accessing the values of x and y sent by the client
+  res.send("x + y = " + (x + y));
+  //Displaying the sum of both
+});
+
 app.listen(8080);
 //Listening on port 8080
