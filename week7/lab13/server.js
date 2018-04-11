@@ -62,5 +62,15 @@ app.get('/calc', function(req, res) {
   }
 });
 
+//Route 6
+
+app.get('/getform', function(req, res) {
+  var name = req.query.name;
+  var quest = req.query.quest;
+  //Accessing the values of name and quest sent by the client
+  res.send("Hi " + name + ", I am sure you will " + quest);
+  //Displaying the sum of both
+});
+
 app.listen(8080);
 //Listening on port 8080
