@@ -41,8 +41,24 @@ app.get('/calc', function(req, res) {
   var url_parts = url.parse(req.url, true);
   //Storing the url and then parsing the result
   var query = url_parts.query;
-  res.send(query);
-  //Displaying the sum of both
+  var x = parseInt(query[1]);
+  var y = parseInt(query[3]);
+  //Accessing the values of x and y sent by the client
+  var operation = query[4];
+  //Accessing the operation sent by the client
+  if (operation == "add") {
+    res.send("x + y = " + (x + y));
+    //Displaying the sum of both
+  } else if (operation == "sub") {
+    res.send("x - y = " + (x - y));
+    //Displaying the subtraction of both
+  } else if (operation == "mul") {
+    res.send("x * y = " + (x * y));
+    //Displaying the multiplication of both
+  } else if (operation == "div") {
+    res.send("x / y = " + (x / y));
+    //Displaying the division of both
+  }
 });
 
 app.listen(8080);
