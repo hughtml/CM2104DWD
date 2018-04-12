@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
     }
   })
 
-  res.send("Hello world! by express");
+  //res.send("Hello world! by express");
   //Displaying a message
 });
 
