@@ -117,8 +117,8 @@ app.get('/tweetsjson', function(req, res) {
       //Creating an empty array
       for (var i = 0; i < tweets.length; i++) {
         json.push({
-          name: tweets.statuses[i].user.name,
-          text: tweets.statuses[i].text
+          name: tweets[i].statuses.user.name,
+          text: tweets[i].statuses.text
         });
         //Pushing the author account name and text of each tweet
       }
