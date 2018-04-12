@@ -69,6 +69,7 @@ app.get('/twittersearch', function(req, res) {
       res.send(output);
       //If no error then sending the formatted output String
     }
+  })
 });
 
 app.listen(8080);
