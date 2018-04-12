@@ -98,7 +98,7 @@ app.get('/searchterm', function(req, res) {
         output += "</div>";
         //Closing the div of each tweet
       }
-      console.send(output);
+      res.send(output);
       //If no error then sending the formatted output String
     }
   })
