@@ -1,6 +1,5 @@
 //Implementing the first server, but much shorter
 var express = require('express');
-var knockknock = require('knock-knock-jokes');
 //Using the knock knock jokes module
 var app = express();
 
@@ -21,14 +20,6 @@ app.get('/test', function(req, res) {
 
 //Route 3
 
-app.get('/joke', function(req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  var randomJoke = knockknock();
-  res.end(randomJoke);
-});
-
-//Route 4
-
 app.get('/add', function(req, res) {
   var x = parseInt(req.query.x);
   var y = parseInt(req.query.y);
@@ -37,7 +28,7 @@ app.get('/add', function(req, res) {
   //Displaying the sum of both
 });
 
-//Route 5
+//Route 4
 
 app.get('/calc', function(req, res) {
   var url = require('url');
@@ -65,7 +56,7 @@ app.get('/calc', function(req, res) {
   }
 });
 
-//Route 6
+//Route 5
 
 app.get('/getform', function(req, res) {
   var name = req.query.name;
