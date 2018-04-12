@@ -4,6 +4,9 @@ var knockknock = require('knock-knock-jokes');
 //Using the knock knock jokes module
 var app = express();
 
+app.use(express.static('public'));
+//Looking in the public folder
+
 //Route 1
 
 app.get('/', function(req, res) {
