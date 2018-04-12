@@ -46,7 +46,7 @@ app.get('/', function(req, res) {
   //Displaying a message
 });
 
-app.get('/twittersearch', function(req, res) {
+app.get('/searchname', function(req, res) {
   var params = {screen_name: req.query.screenname};
   //Accessing the values for screen name sent by the client
   //Storing it as params for the search
