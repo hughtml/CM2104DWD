@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
       for (var i = 0; i < tweets.length; i++) {
         output += "<div>";
         //For each tweet a div is created
-        output += "<h2>" + tweets[i].user.screen_name + "/<h2>";
+        output += "<h2>" + tweets[i].user.screen_name + "</h2>";
         //For each tweet, the user's screen name is put in a h2 tag
         output += "<p>" + tweets[i].text + "</p>";
         //Putting the text of each tweet into a paragraph
