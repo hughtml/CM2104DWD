@@ -115,10 +115,10 @@ app.get('/tweetsjson', function(req, res) {
     //The process can result in an error so checking if one occurs
       var json = [];
       //Creating an empty array
-      for (var i = 0; i < tweettext.length; i++) {
+      for (var i = 0; i < tweets.statuses.length; i++) {
         json.push({
-          name: tweettext[i].user.name,
-          text: tweettext[i].text
+          name: tweets.statuses[i].user.name,
+          text: tweets.statuses[i].text
         });
         //Pushing the author account name and text of each tweet
       }
