@@ -77,7 +77,7 @@ app.get('/searchname', function(req, res) {
 //Searching by tern
 
 app.get('/searchterm', function(req, res) {
-  var params = {search_term: req.query.searchterm};
+  var params = {q: req.query.searchterm, count: 100};
   //Accessing the values for search term sent by the client
   //Storing it as params for the search
   client.get('search/tweets', params, function(error, tweets, response) {
@@ -86,7 +86,7 @@ app.get('/searchterm', function(req, res) {
     //The process can result in an error so checking if one occurs
       var output = "";
       //Creating an output String
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < tweets.length; i++) {
         output += "<div>";
         //For each tweet a div is created
         output += "<h2>" + tweets[i].user.screen_name + "</h2>";
