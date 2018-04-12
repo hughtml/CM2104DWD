@@ -46,5 +46,30 @@ app.get('/', function(req, res) {
   //Displaying a message
 });
 
+app.get('/twittersearch', function(req, res) {
+  var params = {screen_name: req.query.screenname};
+  //Accessing the values for screen name sent by the client
+  //Storing it as params for the search
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+  //Telling the module what part of Twitter we want to search i.e. timeline
+    if (!error) {
+    //The process can result in an error so checking if one occurs
+      var output = "";
+      //Creating an output String
+      for (var i = 0; i < tweets.length; i++) {
+        output += "<div>";
+        //For each tweet a div is created
+        output += "<h2>" + tweets[i].user.screen_name + "</h2>";
+        //For each tweet, the user's screen name is put in a h2 tag
+        output += "<p>" + tweets[i].text + "</p>";
+        //Putting the text of each tweet into a paragraph
+        output += "</div>";
+        //Closing the div of each tweet
+      }
+      res.send(output);
+      //If no error then sending the formatted output String
+    }
+});
+
 app.listen(8080);
 //Telling the app to listen on port 8080
