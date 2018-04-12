@@ -108,12 +108,11 @@ app.get('/searchterm', function(req, res) {
 
 app.get('/tweetsjson', function(req, res) {
   var params = {screen_name: 'nodejs'};
-  //Setting up the parameters
+  //Setting the parameters i.e. the screen name to search for
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
   //Telling the module what part of Twitter we want to search i.e. timeline
     if (!error) {
-      var tweettext = tweets.statuses;
-      //Storing the text of each tweet
+    //The process can result in an error so checking if one occurs
       var json = [];
       //Creating an empty array
       for (var i = 0; i < tweettext.length; i++) {
