@@ -104,5 +104,28 @@ app.get('/searchterm', function(req, res) {
   })
 });
 
+//Creating smaller JSON
+
+app.get('/tweetsjson', function(req, res) {
+  var params = {screen_name: 'nodejs'};
+  //Setting up the parameters
+  client.get('statuses/user_timeline', params. function(error, tweets, response) {
+  //Telling the module what part of Twitter we want to search i.e. timeline
+    if (!error) {
+      var json = [];
+      //Creating an empty array
+      for (var i = 0; i < tweets.statuses.length; i++) {
+        json.push({
+          name: tweets.statuses[i].user.name;
+          text: tweets.statuses[i].text;
+        });
+        //Pushing the author account name and text of each tweet
+      }
+      res.send(JSON.stringify(json));
+      //Sending the JSON to the screen
+    }
+  });
+});
+
 app.listen(8080);
 //Telling the app to listen on port 8080
