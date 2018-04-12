@@ -86,7 +86,7 @@ app.get('/searchterm', function(req, res) {
     //The process can result in an error so checking if one occurs
       var output = "";
       //Creating an output String
-      for (var i = 0; i < tweets.length; i++) {
+      for (var i = 0; i < 10; i++) {
         output += "<div>";
         //For each tweet a div is created
         output += "<h2>" + tweets[i].user.screen_name + "</h2>";
