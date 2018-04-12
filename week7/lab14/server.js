@@ -77,7 +77,7 @@ app.get('/searchname', function(req, res) {
 //Searching by tern
 
 app.get('/searchterm', function(req, res) {
-  var params = {search_term: req.query.searchterm, count: 100};
+  var params = {q: req.query.searchterm, count: 100};
   //Accessing the values for search term sent by the client
   //Storing it as params for the search
   client.get('search/tweets', params, function(error, tweets, response) {
