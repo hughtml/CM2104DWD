@@ -112,12 +112,14 @@ app.get('/tweetsjson', function(req, res) {
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
   //Telling the module what part of Twitter we want to search i.e. timeline
     if (!error) {
+      var tweettext = tweets.statuses;
+      //Storing the text of each tweet
       var json = [];
       //Creating an empty array
-      for (var i = 0; i < tweets.statuses.length; i++) {
+      for (var i = 0; i < tweettext.length; i++) {
         json.push({
-          name: tweets.statuses[i].user.name,
-          text: tweets.statuses[i].text
+          name: tweettext[i].user.name,
+          text: tweettext[i].text
         });
         //Pushing the author account name and text of each tweet
       }
