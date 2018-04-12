@@ -19,6 +19,17 @@ app.use(express.static('public'));
 //Default route
 
 app.get('/', function(req, res) {
+  var params = {screen_name: 'nodejs'};
+  //Setting the parameters i.e. the screen name to search for
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+  //Telling the module what part of Twitter we want to search i.e. timeline
+    if (!error) {
+    //The process can result in an error so checking if one occurs
+      console.log(tweets);
+      //If no error then tweets are posted to the server console
+    }
+  })
+
   res.send("Hello world! by express");
   //Displaying a message
 });
