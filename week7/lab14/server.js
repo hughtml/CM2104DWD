@@ -25,8 +25,20 @@ app.get('/', function(req, res) {
   //Telling the module what part of Twitter we want to search i.e. timeline
     if (!error) {
     //The process can result in an error so checking if one occurs
-      res.send(tweets);
-      //If no error then tweets are posted to the browser screen
+      var output = "";
+      //Creating an output String
+      for (var i = 0; i < tweets.length; i++) {
+        output += "<div>";
+        //For each tweet a div is created
+        output += "<h2>" + tweets[i].user.screen_name + "/<h2>";
+        //For each tweet, the user's screen name is put in a h2 tag
+        output += "<p>" + tweets[i].text + "</p>";
+        //Putting the text of each tweet into a paragraph
+        output += "</div>";
+        //Closing the div of each tweet
+      }
+      res.send(output);
+      //If no error then sending the formatted output String
     }
   })
 
