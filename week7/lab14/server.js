@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
   //Telling the module what part of Twitter we want to search i.e. timeline
     if (!error) {
     //The process can result in an error so checking if one occurs
-      res.send(tweets);
+      console.log(tweets);
       //If no error then tweets are posted to the browser screen
     }
   })
