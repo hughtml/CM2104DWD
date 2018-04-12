@@ -115,7 +115,7 @@ app.get('/tweetsjson', function(req, res) {
     //The process can result in an error so checking if one occurs
       var json = [];
       //Creating an empty array
-      for (var i = 0; i < tweets.statuses.length; i++) {
+      for (var i = 0; i < tweets.length; i++) {
         json.push({
           name: tweets.statuses[i].user.name,
           text: tweets.statuses[i].text
