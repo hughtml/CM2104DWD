@@ -84,19 +84,21 @@ app.get('/searchterm', function(req, res) {
   //Telling the module what part of Twitter we want to search i.e. filter
     if (!error) {
     //The process can result in an error so checking if one occurs
+      var tweettext = tweets.statuses;
+      //Storing the text of each tweet
       var output = "";
       //Creating an output String
-      for (var i = 0; i < tweets.length; i++) {
+      for (var i = 0; i < tweettext.length; i++) {
         output += "<div>";
         //For each tweet a div is created
-        output += "<h2>" + tweets[i].user.screen_name + "</h2>";
+        output += "<h2>" + tweettext[i].user.screen_name + "</h2>";
         //For each tweet, the user's screen name is put in a h2 tag
-        output += "<p>" + tweets[i].text + "</p>";
+        output += "<p>" + tweettext[i].text + "</p>";
         //Putting the text of each tweet into a paragraph
         output += "</div>";
         //Closing the div of each tweet
       }
-      res.send(output);
+      console.send(output);
       //If no error then sending the formatted output String
     }
   })
