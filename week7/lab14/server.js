@@ -80,7 +80,7 @@ app.get('/searchterm', function(req, res) {
   var params = {search_term: req.query.searchterm};
   //Accessing the values for search term sent by the client
   //Storing it as params for the search
-  client.stream('statuses/filter', params, function(error, tweets, response) {
+  client.get('search/tweets', params, function(error, tweets, response) {
   //Telling the module what part of Twitter we want to search i.e. filter
     if (!error) {
     //The process can result in an error so checking if one occurs
