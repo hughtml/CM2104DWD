@@ -29,7 +29,7 @@ MongoClient.connect(url, function(err, database) {
 //you need to complete these
 
 app.get('/', function(req,res) {
-  db.collection('quotes').find().toArray(function error, result) {
+  db.collection('quotes').find().toArray(function (error, result) {
     if (error) {
       throw error;
       //If there's an error, throw it
