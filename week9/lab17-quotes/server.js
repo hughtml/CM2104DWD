@@ -91,7 +91,7 @@ app.post('/delete', function(req, res) {
       throw error;
       //If there's an error, throw it
     }
-    res.render('pages/index', {quotes: result});
+    res.redirect('/');
   });
 });
 
@@ -103,6 +103,6 @@ app.post('/update', function(req, res) {
       throw error;
       //If there's an error, throw it
     }
-    res.redirect('/');
+    res.render('pages/index', {quotes: result});
   });
 });
