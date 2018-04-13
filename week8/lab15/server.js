@@ -87,3 +87,16 @@ app.post('/search', function(req, res) {
     //Displaying the output String
   });
 });
+
+app.post('/delete', function (req, res) {
+//Creating a route to delete from the database
+  db.collection('quotes').deleteOne(req.body, function(error, result) {
+  //Deleting the quote in  the request body from the database
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+    res.redirect('/');
+    //Redirecting the user
+  })
+})
