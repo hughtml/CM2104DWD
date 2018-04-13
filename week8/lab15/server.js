@@ -42,5 +42,5 @@ app.get('all', function(req, res) {
       //Formatting the output String
       //Each quote gets a div, the name of the person who said it in h3 tags and the quote itself in p tags
     }
-  })
-}
+  });
+)};
