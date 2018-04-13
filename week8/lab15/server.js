@@ -1,11 +1,14 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/star_wars_quotes";
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 //Creating and setting up variables prior to database connection
 
 app.use(express.static('public'));
 //Telling the server to view what's in the public folder
+app.use(bodyParser.urlencoded({extended: true}));
+//Telling the server to use the body parser
 
 var db;
 //Creating a variable to store the database
@@ -46,3 +49,18 @@ app.get('/all', function(req, res) {
     //Sending the output to be displayed
   });
 });
+
+app.post('/quotes', function(req, res) {
+//Creating a route to post the data to the database
+  db.collection('quotes').save(req.body, function(error, result) {
+  //Saving the new data to the database
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+    console.log('Saved to database');
+    //If it works, giving a response in the console
+    res.redirect('/');
+    //Redirecting the user
+  })
+})
