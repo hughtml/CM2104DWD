@@ -13,6 +13,24 @@
 
   <main>
     <div class="jumbotron">
+      <!-- Section to welcome the currently logged in user-->
+      <h2>Welcome Back!</h2>
+      <p>Great to see you again, <%= user.login.username %>.</p>
+
+          <ul>
+            <!-- for each user-->
+            <% users.forEach(function(user) { %>
+              <li>
+                <!-- create a link which directs to our /profile route and provides the username for tha user-->
+                <!-- display the users title, first and last name as the link text -->
+                <a href="/profile?username=<%= user.login.username %>"> <%= user.name.title+" "+user.name.first+" "+ user.name.last %> </a>
+              </li>
+            <% }); %>
+          </ul>
+
+
+    </div>
+    <div class="jumbotron">
       <!--page to display all the users-->
       <h2>All Students</h2>
 
