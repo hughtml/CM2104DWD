@@ -6,8 +6,6 @@
  * @Last modified time: 25-Mar-182018
  */
 
-
-
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/star_wars_quotes";
 const express = require('express');
@@ -31,19 +29,19 @@ MongoClient.connect(url, function(err, database) {
 //you need to complete these
 
 app.get('/', function(req,res) {
-  res.render('pages/index')
+  res.render('pages/index');
 });
 app.get('/add', function(req,res) {
-
+  res.render('pages/add');
 });
 app.get('/delete', function(req,res) {
-
+  res.render('pages/delete');
 });
 app.get('/filter', function(req,res) {
-
+  res.render('pages/filter');
 });
 app.get('/update', function(req,res) {
-
+  res.render('pages/update');
 });
 
 
