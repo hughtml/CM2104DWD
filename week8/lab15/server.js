@@ -45,4 +45,4 @@ app.get('all', function(req, res) {
     res.send(output);
     //Sending the output to be displayed
   });
-)};
+});
