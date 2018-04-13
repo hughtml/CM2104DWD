@@ -64,3 +64,26 @@ app.post('/quotes', function(req, res) {
     //Redirecting the user
   })
 })
+
+app.post('/search', function(req, res) {
+//Creating a route to search through the database
+  db.collection('quotes').find(req.body).toArray(function(error, result) {
+  //Finding the quotes collection and converting all entires to an array
+  //Using the find() function to use the request's body
+    if (error) {
+      throw error;
+      //If there's an arror, throw it
+    }
+
+    var output = "<h1>All the quotes</h1>";
+    for (var i = 0; i < result.length; i++) {
+        output += "<div>";
+        output += "<h3>" + result[i].name + "</h3>";
+        output += "<p>" + result[i].quote + "</p>";
+        output += "</div>";
+        //Formatting the output String
+    }
+    res.send(output);
+    //Displaying the output String
+  });
+});
