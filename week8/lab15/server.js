@@ -88,7 +88,7 @@ app.post('/search', function(req, res) {
   });
 });
 
-app.post('/delete', function (req, res) {
+app.post('/delete', function(req, res) {
 //Creating a route to delete from the database
   db.collection('quotes').deleteOne(req.body, function(error, result) {
   //Deleting the quote in  the request body from the database
@@ -98,5 +98,22 @@ app.post('/delete', function (req, res) {
     }
     res.redirect('/');
     //Redirecting the user
-  })
-})
+  });
+});
+
+app.post('/update', function(req, res) {
+  var query = {quote: req.body.quote};
+  //Storing the existing quote to look or
+  var newvalues = {$set: {name: req.body.newname. quote: req.body.newquote}};
+  //Storing the new values to update it with
+
+  db.collection('quotes').updateOne(query, newvalues, function(error, result) {
+  //Updating the existing quote in the database
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+    res.redirect('/');
+    //Redirecting the user
+  });
+});
