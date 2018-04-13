@@ -76,7 +76,7 @@ app.post('/quotes', function (req, res) {
 })
 
 app.post('/search', function(req, res) {
-  db.collection('quotes').find(req.body).toArray(function(err, result) {
+  db.collection('quotes').find(req.body).toArray(function(error, result) {
     if (error) {
       throw error;
       //If there's an error, throw it
