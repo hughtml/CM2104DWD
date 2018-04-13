@@ -96,7 +96,10 @@ app.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
-
+//this is our update route, all it does is render the update.ejs page.
+app.get('/update', function(req, res) {
+  res.render('pages/update');
+});
 
 
 //********** POST ROUTES - Deal with processing data from forms ***************************
