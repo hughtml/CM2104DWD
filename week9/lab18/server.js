@@ -118,7 +118,7 @@ app.post('/dologin', function(req, res) {
       db.collection('people').findOne({"login.username":uname}, function(err2, result2) {
         if (err2) throw err2;//if there is an error, throw the error
         //if there is no result, redirect the user back to the login system as that username must not exist
-        res.redirect('/', {uname: result2});
+        res.render('/', {uname: result2});
       });
     //otherwise send them back to login
     } else {res.redirect('/login')}
