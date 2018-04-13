@@ -122,6 +122,7 @@ app.post('/dologin', function(req, res) {
           users: result2,
           current: result
         });
+      });
     //otherwise send them back to login
     } else {res.redirect('/login')}
   });
