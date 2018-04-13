@@ -104,7 +104,7 @@ app.post('/delete', function(req, res) {
 app.post('/update', function(req, res) {
   var query = {quote: req.body.quote};
   //Storing the existing quote to look or
-  var newvalues = {$set: {name: req.body.newname. quote: req.body.newquote}};
+  var newvalues = {$set: {name: req.body.newname, quote: req.body.newquote}};
   //Storing the new values to update it with
 
   db.collection('quotes').updateOne(query, newvalues, function(error, result) {
