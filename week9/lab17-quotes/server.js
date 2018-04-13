@@ -77,17 +77,11 @@ app.post('/quotes', function (req, res) {
 
 app.post('/search', function(req, res) {
   db.collection('quotes').find(req.body).toArray(function(err, result) {
-    if (err) throw err;
-
-    var output = "<h1>quotes by" +req.body.name+ "</h1>";
-
-    for (var i = 0; i < result.length; i++) {
-      output += "<div>"
-      output += "<h3>" + result[i].name + "</h3>"
-      output += "<p>" + result[i].quote + "</p>"
-      output += "</div>"
+    if (error) {
+      throw error;
+      //If there's an error, throw it
     }
-    res.send(output);
+    res.render('pages/index', {quotes: result});
   });
 });
 
