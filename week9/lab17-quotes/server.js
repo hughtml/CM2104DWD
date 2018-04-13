@@ -29,7 +29,13 @@ MongoClient.connect(url, function(err, database) {
 //you need to complete these
 
 app.get('/', function(req,res) {
-  res.render('pages/index');
+  db.collection('quotes').find().toArray(function error, result) {
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+    res.render('pages/index', {quotes: result});
+  });
 });
 app.get('/add', function(req,res) {
   res.render('pages/add');
