@@ -22,7 +22,7 @@ MongoClient.connect(url, function(error, database) {
   //Telling the app to listen to a specific port
 });
 
-app.get('all', function(req, res) {
+app.get('/all', function(req, res) {
 //Creating a route to display all the quotes in the database
   db.collection('quotes').find().toArray(function(error, result) {
   //Finding the quotes collection in the database
