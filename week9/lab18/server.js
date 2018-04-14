@@ -146,6 +146,18 @@ app.post('/delete', function(req, res) {
   });
 });
 
+app.post('/doupdate', function(req, res) {
+  if(!req.session.loggedin){res.redirect('/login');return;}
+  var query = { quote: req.body.quote };
+  var newvalues = { $set: {name: req.body.newname, quote: req.body.newquote } };
+  db.collection('quotes').updateOne(query,newvalues, function(error, result) {
+    if (error) {
+      throw error;
+      //If there's an error, throw it
+    }
+    res.render('pages/index', {quotes: result});
+  });
+});
 
 //the adduser route deals with adding a new user
 //dataformat for storing new users.
